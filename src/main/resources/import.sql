@@ -1,10 +1,10 @@
 INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Allan da Rocha', '371.670.190-46', 20000.03, '1986-07-29', 0);
-INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Aline Santos Duarte', '832.254.650-54', 2000.20, '1996-01-12', 0);
-INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Kelly Fernandes de Souza', '873.713.170-25', 1500.21, '1999-07-01', 0);
-INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Carla Oliveira da Silva', '339.656.240-24', 7000.53, '2000-07-23', 0);
+INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Aline Santos Duarte', '832.254.650-54', 2000.20, '1996-01-12', 1);
+INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Kelly Fernandes de Souza', '873.713.170-25', 1500.21, '1999-07-01', 4);
+INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Carla Oliveira da Silva', '339.656.240-24', 7000.53, '2000-07-23', 2);
 INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Martha Rocha Castro', '193.845.230-54', 1245.72, '2001-10-18', 0);
-INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Silvana Alencar Valença', '664.156.010-40', 9990.42, '1998-03-14', 0);
+INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Silvana Alencar Valença', '664.156.010-40', 9990.42, '1998-03-14', 1);
 INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('André Picheth Filho', '831.853.830-79', 1234.12, '1997-04-20', 0);
-INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Luciana Guimarães Roza', '949.959.170-20', 2359.05, '1976-12-21', 0);
-INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Lilian Silva de Carvalho', '035.615.020-83', 7256.30, '1966-05-15', 0);
-INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Juscely Alencar Oliveira Valença Coelho', '873.534.150-53', 4300.20, '2005-03-02', 0);
+INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Luciana Guimarães Roza', '949.959.170-20', 2359.05, '1976-12-21', 2);
+INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Lilian Silva de Carvalho', '035.615.020-83', 7256.30, '1966-05-15', 2);
+INSERT INTO tb_client(name, cpf, incoming, birth_date, children) VALUES ('Juscely Alencar Oliveira Valença Coelho', '873.534.150-53', 4300.20, '2005-03-02', 4);
