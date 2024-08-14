@@ -14,22 +14,20 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank(message = "O campo não pode ser vazio")
     private String name;
     private String cpf;
-    private Double incoming;
-    @PastOrPresent(message = "O Campo não pode ser data futura")
+    private Double income;
     private LocalDate birthDate;
     private Integer children;
 
     public Client() {
     }
 
-    public Client(Long id, String name, String cpf, Double incoming, LocalDate birthDate, Integer children) {
+    public Client(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
-        this.incoming = incoming;
+        this.income = income;
         this.birthDate = birthDate;
         this.children = children;
     }
@@ -58,12 +56,12 @@ public class Client {
         this.cpf = cpf;
     }
 
-    public Double getIncoming() {
-        return incoming;
+    public Double getIncome() {
+        return income;
     }
 
-    public void setIncoming(Double incoming) {
-        this.incoming = incoming;
+    public void setIncome(Double income) {
+        this.income = income;
     }
 
     public LocalDate getBirthDate() {

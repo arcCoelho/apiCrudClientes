@@ -1,6 +1,8 @@
 package com.clientsup.sgc.dto.errors;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomError {
 
@@ -31,4 +33,6 @@ public class CustomError {
     public String getPath() {
         return path;
     }
+
+
 }
