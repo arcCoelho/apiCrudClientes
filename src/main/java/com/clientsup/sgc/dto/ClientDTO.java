@@ -40,15 +40,12 @@ public class ClientDTO {
     public ClientDTO() {
     }
 
-    public Client parseToClient(){
-        return new Client(
-                this.id,
-                this.name,
-                this.cpf,
-                this.income,
-                this.birthDate,
-                this.children
-        );
+    public void parseToClient(Client client){
+        client.setName(this.name);
+        client.setCpf(this.cpf);
+        client.setIncome(this.income);
+        client.setBirthDate(this.birthDate);
+        client.setChildren(this.children);
     }
 
     public Long getId() {

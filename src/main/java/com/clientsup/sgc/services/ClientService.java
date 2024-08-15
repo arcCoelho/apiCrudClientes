@@ -4,6 +4,7 @@ import com.clientsup.sgc.dto.ClientDTO;
 import com.clientsup.sgc.entity.Client;
 import com.clientsup.sgc.repositories.ClientRepository;
 import com.clientsup.sgc.services.exceptions.ResourceNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -28,9 +29,32 @@ public class ClientService {
 
     @Transactional
     public ClientDTO create(ClientDTO dto) {
-        Client entity = dto.parseToClient();
+        Client entity = new Client();
+        dto.parseToClient(entity);
         entity = repository.save(entity);
         dto = new ClientDTO(entity.getId(), entity.getName(), entity.getCpf(), entity.getIncome(), entity.getBirthDate(), entity.getChildren());
         return dto;
+    }
+
+    @Transactional
+    public void remove(Long id) {
+        if(!repository.existsById(id)){
+            throw new ResourceNotFoundException("Cliente com id: "+id+" não encontrado");
+        }
+
+        repository.deleteById(id);
+    }
+
+    @Transactional
+    public ClientDTO update(Long id, ClientDTO dto) {
+        try {
+            Client entity = repository.getReferenceById(id);
+            dto.parseToClient(entity);
+            repository.save(entity);
+
+            return new ClientDTO(entity);
+        }catch (EntityNotFoundException e){
+            throw new ResourceNotFoundException("Cliente com id: "+id+" não encontrado");
+        }
     }
 }
